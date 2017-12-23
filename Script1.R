@@ -11,5 +11,3 @@ percentMaleFemale = function(x){
 matrix = as.matrix(t(apply(cityCensus,1,percentMaleFemale)))
 dimnames(matrix)[[2]]<-c("ZipCode","MalesPercent","FemalesPercent")
 print(matrix)
-
-
