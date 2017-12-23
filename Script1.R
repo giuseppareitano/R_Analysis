@@ -16,3 +16,6 @@ print(matrix)
 #Now extract a subset of dataframe compound by ZipCode and Total Population of all districts with Average Household Size >3
 subCensus = subset(cityCensus,subset = (Average.Household.Size>3),select = c(Zip.Code, Total.Population))
 write.table(subCensus,"Output3.txt",sep="\t",row.names=FALSE) #Saving subset into a file Output3.txt
+
+#Now extract a subset of dataframe compound by Total Males and Total Females of all district with Median Age > 35
+print(subset(cityCensus,subset = (Median.Age>35),select = c(Total.Males,Total.Females)))
